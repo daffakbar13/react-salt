@@ -16,7 +16,7 @@ export default function App() {
       styles={{
         body:{
           backgroundColor: theme.palette.primary.main,
-          padding: '0 5%'
+          margin: '20px 5%'
         }
       }} />
       <Routes/>
