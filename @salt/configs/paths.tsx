@@ -4,10 +4,7 @@ import { createPath } from "../utils/createPath";
 
 export const BasePath = [
     createPath({
-        path: '/'
-    }),
-    createPath({
-        path: '/home',
+        path: '/',
         element: <PageHome/>
-    })
+    }),
 ]

@@ -1,11 +1,6 @@
-import React from "react"
+import * as React from "react"
 
-interface PageHomeProps {
-
-}
-
-export default function PageHome(props: PageHomeProps) {
-  const {} = props
+export default function PageHome() {
   return (
     <div>asd</div>
   )
