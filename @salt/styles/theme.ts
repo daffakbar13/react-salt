@@ -8,7 +8,10 @@ const theme = createTheme({
         secondary: {
             main: '#f4e3cf'
         }
-    }
+    },
+    typography: {
+        fontFamily: 'Roboto',
+      },
 })
 
 export default theme

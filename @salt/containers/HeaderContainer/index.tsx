@@ -1,4 +1,5 @@
 import * as React from "react";
+import Breadcrumbs from "../../components/BreadCrumbs";
 import Navbar from "../../components/Navbar";
 
 export default function HeaderContainer(props: React.PropsWithChildren) {
@@ -7,6 +8,7 @@ export default function HeaderContainer(props: React.PropsWithChildren) {
   return (
     <>
       <Navbar />
+      <Breadcrumbs/>
       {children}
     </>
   );

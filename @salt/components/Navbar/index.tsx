@@ -10,7 +10,7 @@ import PersonIcon from "@mui/icons-material/Person";
 export default function Navbar() {
   const theme = useTheme();
   return (
-    <Grid container spacing={{xs:2}}>
+    <Grid container spacing={{ xs: 2 }}>
       <Grid item xs={3} style={{ fontSize: 30 }}>
         <span style={{ color: theme.palette.secondary.main }}>Social</span>
         <span style={{ color: theme.palette.grey[400] }}>Network</span>
@@ -39,16 +39,28 @@ export default function Navbar() {
         </Button>
       </Grid>
       <Grid item xs={2}>
-        <Box flex={'20px'}>
+        <Box display={"flex"} gap={2}>
           <Button variant="contained" color="secondary">
             <PersonIcon />
           </Button>
           <div>
             <div style={{ color: theme.palette.secondary.main, fontSize: 18 }}>
-              Waseem
+              <span>Waseem </span>
+              <span
+                style={{
+                  backgroundColor: theme.palette.secondary.main,
+                  color: theme.palette.primary.main,
+                  borderRadius: "50%",
+                  fontSize: 8,
+                  padding: 3,
+                  lineHeight: 5,
+                }}
+              >
+                K3
+              </span>
             </div>
-            <div style={{ color: theme.palette.secondary.main, fontSize: 18 }}>
-              Waseem
+            <div style={{ color: theme.palette.secondary.main, fontSize: 14 }}>
+              Arshad
             </div>
           </div>
         </Box>
