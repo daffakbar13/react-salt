@@ -10,12 +10,12 @@ import PersonIcon from "@mui/icons-material/Person";
 export default function Navbar() {
   const theme = useTheme();
   return (
-    <Grid container spacing={{ xs: 2 }}>
-      <Grid item xs={3} style={{ fontSize: 30 }}>
+    <Grid container spacing={2}>
+      <Grid item xs={12} md={6} lg={3} style={{ fontSize: 30 }}>
         <span style={{ color: theme.palette.secondary.main }}>Social</span>
         <span style={{ color: theme.palette.grey[400] }}>Network</span>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} md={6}>
         <Input
           size="small"
           fullWidth
@@ -29,7 +29,7 @@ export default function Navbar() {
           }
         />
       </Grid>
-      <Grid item xs={1}>
+      <Grid item>
         <Button
           variant="contained"
           color="secondary"
@@ -38,20 +38,25 @@ export default function Navbar() {
           Upload
         </Button>
       </Grid>
-      <Grid item xs={2}>
-        <Box display={"flex"} gap={2}>
-          <Button variant="contained" color="secondary">
-            <PersonIcon />
-          </Button>
-          <div>
-            <div style={{ color: theme.palette.secondary.main, fontSize: 18 }}>
-                Waseem
-            </div>
-            <div style={{ color: theme.palette.secondary.main, fontSize: 14 }}>
-              Arshad
-            </div>
-          </div>
-        </Box>
+      <Grid item>
+        <Grid container spacing={1}>
+          <Grid item>
+            <Button variant="contained" color="secondary">
+              <PersonIcon />
+            </Button>
+          </Grid>
+          <Grid item>
+            <Box
+              display={"flex"}
+              flexDirection="column"
+              justifyContent={"center"}
+              sx={{ color: "secondary.main" }}
+            >
+              <span style={{ fontSize: 18 }}>Waseem</span>
+              <span style={{ fontSize: 14 }}>Arshad</span>
+            </Box>
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );
