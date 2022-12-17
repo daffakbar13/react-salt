@@ -5,7 +5,6 @@ const Button = styled(ButtonMui)<ButtonProps>(({theme})=>({
     borderRadius: 0,
     color: theme.palette.primary.main,
     textTransform: 'none',
-    padding: 10
 }))
 
 export default Button

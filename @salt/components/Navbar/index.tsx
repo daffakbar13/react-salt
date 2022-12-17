@@ -43,7 +43,6 @@ export default function Navbar() {
           <Button variant="contained" color="secondary">
             <PersonIcon />
           </Button>
-          <div>
             <div style={{ color: theme.palette.secondary.main, fontSize: 18 }}>
               <span>Waseem </span>
               <span
@@ -62,7 +61,6 @@ export default function Navbar() {
             <div style={{ color: theme.palette.secondary.main, fontSize: 14 }}>
               Arshad
             </div>
-          </div>
         </Box>
       </Grid>
     </Grid>
