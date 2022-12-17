@@ -1,10 +1,5 @@
 import * as React from "react";
-import {
-  BrowserRouter,
-  Routes as Switch,
-  Route,
-  PathRouteProps,
-} from "react-router-dom";
+import { BrowserRouter, Routes as Switch, Route } from "react-router-dom";
 import { BasePath } from "../configs/paths";
 import HeaderContainer from "../containers/HeaderContainer";
 
