@@ -8,7 +8,9 @@ export default function HeaderContainer(props: React.PropsWithChildren) {
   return (
     <>
       <Navbar />
-      <Breadcrumbs/>
+      <Breadcrumbs>
+      asd
+      </Breadcrumbs>
       {children}
     </>
   );
