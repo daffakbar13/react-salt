@@ -6,7 +6,7 @@ const Collection = styled(Card)<CardProps>(({theme})=>({
     boxShadow: 'none'
 }))
 
-export const MoreAction = styled(Card)<CardProps>(({theme})=>({
+export const MoreAction = styled(Collection)<CardProps>(({theme})=>({
     backgroundColor: 'transparent',
     borderWidth: 1,
     borderStyle: 'solid',
