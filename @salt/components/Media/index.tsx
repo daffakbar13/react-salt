@@ -21,9 +21,11 @@ const Description = styled(CardContent)<CardContentProps>(()=>({
     right: 0,
     left: 0,
     zIndex: 1,
-    color: theme.palette.primary.main
+    color: theme.palette.primary.main,
+    padding: 10
 }))
 
-const Media = {Collection, MoreAction, Description}
+const Media = {Collection, MoreAction, 
+}
 
 export default Media
