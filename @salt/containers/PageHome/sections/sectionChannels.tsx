@@ -52,9 +52,9 @@ export default function SectionChannels() {
         height="100%"
         overflow="scroll"
       >
-        {data.map(({ name, type, description, time }, i) => (
-          <Grid key={i} container spacing={1} columns={2}>
-            <Grid item xs={1}>
+        <Grid container spacing={1} columns={2}>
+          {data.map(({ name, type, description, time }, i) => (
+            <Grid key={i} item xs={1}>
               <Media.Collection
                 sx={{ width: "100%", height }}
                 id="channel-content"
@@ -68,25 +68,37 @@ export default function SectionChannels() {
                   <Media.Description>
                     <Typography variant="subtitle2">{name}</Typography>
                   </Media.Description>
+                  <Box>
+                    <Box
+                      position="absolute"
+                      top={0}
+                      right={0}
+                      zIndex={1}
+                      sx={{
+                        width: 0,
+                        height: 0,
+                        borderTop: "0 solid transparent",
+                        borderRight: "25px solid",
+                        borderRightColor: "primary.dark",
+                        borderBottom: "25px solid transparent",
+                      }}
+                    />
+                    <Box
+                      position="absolute"
+                      top={0}
+                      right={3}
+                      color="secondary.main"
+                      zIndex={1}
+                      sx={{ fontSize: 12 }}
+                    >
+                      +
+                    </Box>
+                  </Box>
                 </CardActionArea>
               </Media.Collection>
             </Grid>
-            <Grid item xs={1}>
-              <Media.Collection sx={{ width: "100%", height }}>
-                <CardActionArea>
-                  <Skeleton
-                    variant="rectangular"
-                    width="100%"
-                    height={height}
-                  />
-                  <Media.Description>
-                    <Typography variant="subtitle2">{name}</Typography>
-                  </Media.Description>
-                </CardActionArea>
-              </Media.Collection>
-            </Grid>
-          </Grid>
-        ))}
+          ))}
+        </Grid>
       </Box>
       <Divider />
     </Box>
