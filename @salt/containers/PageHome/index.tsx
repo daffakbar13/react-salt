@@ -1,24 +1,27 @@
 import {
+  Box,
   Card,
   CardActionArea,
   CardContent,
   CardMedia,
+  Grid,
   Skeleton,
   Typography,
 } from "@mui/material";
 import * as React from "react";
+import { SectionVideos } from "./sections";
 
 export default function PageHome() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <Skeleton variant="rectangular" width="100%" height={118} />
-        <CardContent>
-          <Skeleton width="100%" height={30} />
-          <Skeleton width="100%" height={20} />
-          <Skeleton width="80%" height={20} />
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <Grid container spacing={2}>
+      <Grid item xs={12} md={10}>
+        <Box display={'flex'} flexDirection='column' gap={2}>
+          <SectionVideos/>
+        </Box>
+      </Grid>
+      <Grid item xs={12} md={4}>
+
+      </Grid>
+    </Grid>
   );
 }
