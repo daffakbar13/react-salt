@@ -9,7 +9,9 @@ const IconButton = styled(IconButtonMui)<IconButtonProps>(({ theme }) => ({
   borderWidth: 1,
   borderStyle: "solid",
   height: 40,
-  width: 40
+  width: 40,
+  color: theme.palette.secondary.main,
+  fontSize: 20,
 }));
 
 export default IconButton;
