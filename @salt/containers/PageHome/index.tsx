@@ -1,6 +1,6 @@
 import { Box, Grid } from "@mui/material";
 import * as React from "react";
-import { SectionActivity, SectionChannels, SectionVideos } from "./sections";
+import { SectionActivity, SectionChannels, SectionDocuments, SectionPeople, SectionVideos } from "./sections";
 
 export default function PageHome() {
   return (
@@ -8,8 +8,8 @@ export default function PageHome() {
       <Grid item xs={12} md={8}>
         <Box display={"flex"} flexDirection="column" gap={5}>
           <SectionVideos />
-          <SectionVideos />
-          <SectionVideos />
+          <SectionPeople />
+          <SectionDocuments />
         </Box>
       </Grid>
       <Grid item xs={12} md={4}>
