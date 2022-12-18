@@ -28,7 +28,7 @@ export default function TitleMenu(props: TitleMenuProps) {
       <Typography variant="h5">{title}</Typography>
       <Box display={"flex"} flexDirection="column-reverse">
         <Typography
-          variant="subtitle2"
+          variant="subtitle1"
           sx={{ cursor: "pointer" }}
           onClick={() => navigate(path)}
         >

@@ -10,7 +10,8 @@ export const MoreAction = styled(Collection)<CardProps>(({theme})=>({
     backgroundColor: 'transparent',
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: theme.palette.secondary.main
+    borderColor: theme.palette.secondary.main,
+    boxSizing: 'border-box'
 }))
 
 const Description = styled(CardContent)<CardContentProps>(()=>({

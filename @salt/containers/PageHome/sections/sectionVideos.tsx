@@ -1,19 +1,29 @@
-import { Box, CardActionArea, Grid, Skeleton, Typography } from "@mui/material";
-import * as React from "react";
-import { useNavigate } from "react-router-dom";
-import Media from "../../../components/Media";
-import NorthIcon from "@mui/icons-material/North";
-import IconButton from "../../../components/IconButton";
-import TitleMenu from "../../../components/TitleMenu";
+import {
+  Box,
+  CardActionArea,
+  Grid,
+  Skeleton,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
+import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
+import Media from '../../../components/Media';
+import NorthIcon from '@mui/icons-material/North';
+import IconButton from '../../../components/IconButton';
+import TitleMenu from '../../../components/TitleMenu';
 
 export default function SectionVideos() {
   const data: string[] = [];
   for (let i = 0; i < 5; i++) {
-    data.push("test");
+    data.push('test');
   }
   const [bigMedia] = data;
   const rightSection = data.slice(1, 3);
   const bottomSection = data.slice(3, 5);
+  const theme = useTheme();
+  const tablet = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
     <Grid container spacing={1} columns={3}>
@@ -21,16 +31,22 @@ export default function SectionVideos() {
         <TitleMenu
           title="Videos"
           action={{
-            label: "Browse all videos",
-            path: "/",
+            label: 'Browse all videos',
+            path: '/',
           }}
         />
       </Grid>
       <Grid item xs={3} container spacing={1} columns={3}>
         <Grid item xs={3} md={2}>
-          <Media.Collection sx={{ width: "100%", height: "100%" }}>
+          <Media.Collection
+            sx={{ width: '100%', height: tablet ? 200 : '100%' }}
+          >
             <CardActionArea>
-              <Skeleton variant="rectangular" width="100%" height={408} />
+              <Skeleton
+                variant="rectangular"
+                width="100%"
+                height={tablet ? 200 : 408}
+              />
               <Media.Description>
                 <Skeleton width="100%" height={30} />
                 <Skeleton width="100%" height={20} />
@@ -43,7 +59,7 @@ export default function SectionVideos() {
           <Grid container spacing={1} columns={1}>
             {rightSection.map((_, i) => (
               <Grid key={i} item xs={1}>
-                <Media.Collection sx={{ width: "100%", height: 200 }}>
+                <Media.Collection sx={{ width: '100%', height: 200 }}>
                   <CardActionArea>
                     <Skeleton variant="rectangular" width="100%" height={200} />
                     <Media.Description>
@@ -59,7 +75,7 @@ export default function SectionVideos() {
         </Grid>
         {bottomSection.map((_, i) => (
           <Grid key={i} item xs={3} md>
-            <Media.Collection sx={{ width: "100%", height: 200 }}>
+            <Media.Collection sx={{ width: '100%', height: 200 }}>
               <CardActionArea>
                 <Skeleton variant="rectangular" width="100%" height={200} />
                 <Media.Description>
@@ -72,16 +88,16 @@ export default function SectionVideos() {
           </Grid>
         ))}
         <Grid item xs={3} md>
-          <Media.MoreAction sx={{ width: "100%", height: 200 }}>
+          <Media.MoreAction sx={{ width: '100%', height: 200 }}>
             <CardActionArea>
               <Box
                 display="flex"
-                justifyContent={"center"}
+                justifyContent={'center'}
                 flexDirection="column"
                 height={200}
               >
-                <Box display={"flex"} justifyContent="center">
-                  <IconButton sx={{ margin: "auto 10px" }}>
+                <Box display={'flex'} justifyContent="center">
+                  <IconButton sx={{ margin: 'auto 10px' }}>
                     <NorthIcon />
                   </IconButton>
                   <div>
