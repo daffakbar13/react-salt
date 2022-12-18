@@ -7,6 +7,7 @@ import MapsUgcIcon from "@mui/icons-material/MapsUgc";
 
 export default function SectionChannels() {
   const [height, setHeight] = React.useState(0);
+  const [hover, setHover] = React.useState<number>();
   const data: any[] = [];
   for (let i = 0; i < 20; i++) {
     data.push({
@@ -58,6 +59,8 @@ export default function SectionChannels() {
               <Media.Collection
                 sx={{ width: "100%", height }}
                 id="channel-content"
+                onMouseEnter={() => setHover(i)}
+                onMouseLeave={() => setHover(undefined)}
               >
                 <CardActionArea>
                   <Skeleton
@@ -68,32 +71,35 @@ export default function SectionChannels() {
                   <Media.Description>
                     <Typography variant="subtitle2">{name}</Typography>
                   </Media.Description>
-                  <Box>
-                    <Box
-                      position="absolute"
-                      top={0}
-                      right={0}
-                      zIndex={1}
-                      sx={{
-                        width: 0,
-                        height: 0,
-                        borderTop: "0 solid transparent",
-                        borderRight: "25px solid",
-                        borderRightColor: "primary.dark",
-                        borderBottom: "25px solid transparent",
-                      }}
-                    />
-                    <Box
-                      position="absolute"
-                      top={0}
-                      right={3}
-                      color="secondary.main"
-                      zIndex={1}
-                      sx={{ fontSize: 12 }}
-                    >
-                      +
+                  {hover === i && (
+                    <Box>
+                      <Box
+                        position="absolute"
+                        top={0}
+                        right={0}
+                        zIndex={1}
+                        sx={{
+                          width: 0,
+                          height: 0,
+                          borderTop: "0 solid transparent",
+                          borderRight: "25px solid",
+                          borderRightColor: "primary.dark",
+                          borderBottom: "25px solid transparent",
+                        }}
+                      />
+                      <Box
+                        position="absolute"
+                        top={1}
+                        right={4}
+                        color="secondary.main"
+                        fontWeight='bold'
+                        zIndex={1}
+                        sx={{ fontSize: 12 }}
+                      >
+                        +
+                      </Box>
                     </Box>
-                  </Box>
+                  )}
                 </CardActionArea>
               </Media.Collection>
             </Grid>

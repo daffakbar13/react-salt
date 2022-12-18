@@ -6,6 +6,7 @@ import TitleMenu from "../../../components/TitleMenu";
 import MapsUgcIcon from "@mui/icons-material/MapsUgc";
 
 export default function SectionActivity() {
+  const [hover, setHover] = React.useState<number>();
   const data: any[] = [];
   for (let i = 0; i < 20; i++) {
     data.push({
@@ -53,6 +54,8 @@ export default function SectionActivity() {
                 padding: "4px",
               },
             }}
+            onMouseEnter={() => setHover(i)}
+            onMouseLeave={() => setHover(undefined)}
           >
             <Grid container spacing={2} columns={3}>
               <Grid item xs={1}>
@@ -86,32 +89,35 @@ export default function SectionActivity() {
                 </Box>
               </Grid>
             </Grid>
-            <Box>
-              <Box
-                position="absolute"
-                top={-1}
-                right={-1}
-                zIndex={1}
-                sx={{
-                  width: 0,
-                  height: 0,
-                  borderTop: "0 solid transparent",
-                  borderRight: "25px solid",
-                  borderRightColor: "secondary.main",
-                  borderBottom: "25px solid transparent",
-                }}
-              />
-              <Box
-                position="absolute"
-                top={-1}
-                right={3}
-                color="primary.main"
-                zIndex={1}
-                sx={{ fontSize: 12 }}
-              >
-                x
+            {hover === i && (
+              <Box>
+                <Box
+                  position="absolute"
+                  top={-1}
+                  right={-1}
+                  zIndex={1}
+                  sx={{
+                    width: 0,
+                    height: 0,
+                    borderTop: "0 solid transparent",
+                    borderRight: "25px solid",
+                    borderRightColor: "secondary.main",
+                    borderBottom: "25px solid transparent",
+                  }}
+                />
+                <Box
+                  position="absolute"
+                  top={-1}
+                  right={3}
+                  color="primary.main"
+                  fontWeight='bold'
+                  zIndex={1}
+                  sx={{ fontSize: 12 }}
+                >
+                  x
+                </Box>
               </Box>
-            </Box>
+            )}
           </Box>
         ))}
       </Box>
