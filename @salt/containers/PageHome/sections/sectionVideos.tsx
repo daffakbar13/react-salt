@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import * as React from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Media from "../../../components/Media";
 
 export default function SectionVideos() {
@@ -17,6 +18,7 @@ export default function SectionVideos() {
   const [bigMedia] = data;
   const rightSection = data.slice(1, 3);
   const bottomSection = data.slice(3, 5);
+  const navigate = useNavigate();
 
   return (
     <Grid container spacing={1} columns={3}>
@@ -28,7 +30,11 @@ export default function SectionVideos() {
         >
           <Typography variant="h5">Videos</Typography>
           <Box display={"flex"} flexDirection="column-reverse">
-            <Typography variant="subtitle2" sx={{ cursor: "pointer" }}>
+            <Typography
+              variant="subtitle2"
+              sx={{ cursor: "pointer" }}
+              onClick={() => navigate("/")}
+            >
               Browse all videos
             </Typography>
           </Box>
