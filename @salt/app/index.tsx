@@ -17,7 +17,12 @@ export default function App() {
         body:{
           backgroundColor: theme.palette.primary.main,
           margin: '20px 5%',
-          fontFamily: 'Roboto'
+          fontFamily: 'Roboto',
+          '& ::-webkit-scrollbar' : {
+            display: 'none',
+            width: 0,
+            background: 'transparent'
+          }
         }
       }} />
       <Routes/>

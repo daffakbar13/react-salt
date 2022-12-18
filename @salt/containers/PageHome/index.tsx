@@ -15,6 +15,7 @@ export default function PageHome() {
       <Grid item xs={12} md={4}>
         <Box display={"flex"} flexDirection="column" gap={2}>
           <SectionActivity />
+          <SectionActivity />
         </Box>
       </Grid>
     </Grid>
