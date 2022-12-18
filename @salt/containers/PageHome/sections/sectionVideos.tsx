@@ -1,14 +1,15 @@
 import {
   Box,
   CardActionArea,
-  CardContent,
   Grid,
   Skeleton,
   Typography,
 } from "@mui/material";
 import * as React from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Media from "../../../components/Media";
+import NorthIcon from "@mui/icons-material/North";
+import IconButton from "../../../components/IconButton";
 
 export default function SectionVideos() {
   const data: string[] = [];
@@ -87,7 +88,24 @@ export default function SectionVideos() {
         ))}
         <Grid item xs={3} md>
           <Media.MoreAction sx={{ width: "100%", height: 200 }}>
-            <CardActionArea>asd</CardActionArea>
+            <CardActionArea>
+              <Box
+                display="flex"
+                justifyContent={"center"}
+                flexDirection="column"
+                height={200}
+              >
+                <Box display={"flex"} justifyContent="center">
+                  <IconButton>
+                    <NorthIcon sx={{fontSize: 40}} />
+                  </IconButton>
+                  <div>
+                    <Typography>Upload</Typography>
+                    <Typography>Your Own Video</Typography>
+                  </div>
+                </Box>
+              </Box>
+            </CardActionArea>
           </Media.MoreAction>
         </Grid>
       </Grid>
