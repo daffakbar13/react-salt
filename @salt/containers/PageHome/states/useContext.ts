@@ -1,6 +1,4 @@
-import React from "react";
-import { useQuery } from "react-query";
-import { getYoutubeApi } from "../../../api/youtube";
+import * as React from "react";
 import { baseHandler } from "./handler";
 import { baseReducer } from "./reducer";
 import { StateType } from "./state";
@@ -13,8 +11,7 @@ interface CtxType {
 const ctx = React.createContext<CtxType>(undefined as unknown as CtxType);
 
 export function useHomeProvider() {
-  const videosData = useQuery("videosData", getYoutubeApi);
-  const initialValue: StateType = { videosData };
+  const initialValue: StateType = {};
   const [state, dispatch] = React.useReducer(baseReducer, initialValue);
   const handler = baseHandler(state, dispatch);
   const { Provider } = ctx;
