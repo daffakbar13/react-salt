@@ -1,19 +1,18 @@
-import axios from "axios";
+const axios = require("axios");
 
-const options = (q: string) => ({
-  method: "GET",
-  url: "https://youtube-search-results.p.rapidapi.com/youtube-search/",
-  params: { q },
+const options = {
+  method: 'GET',
+  url: 'https://instagram47.p.rapidapi.com/public_user_posts',
+  params: {userid: '1718924098'},
   headers: {
-    "X-RapidAPI-Key": "d067a0ba46mshf99640e4d2b933dp1432cejsn22b51a4db2dd",
-    "X-RapidAPI-Host": "youtube-search-results.p.rapidapi.com",
-  },
-});
+    'X-RapidAPI-Key': 'd067a0ba46mshf99640e4d2b933dp1432cejsn22b51a4db2dd',
+    'X-RapidAPI-Host': 'instagram47.p.rapidapi.com'
+  }
+};
 
-export const getYoutubeApi = async (search: string): Promise<any> => {
-  const payload = search.split(" ").join("+");
+export const getYoutubeApi = async (): Promise<any> => {
   const result = await axios
-    .request(options(payload))
+    .request(options)
     .then((response) => response.data)
     .catch((error) => {
       console.log(error);
