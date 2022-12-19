@@ -7,18 +7,18 @@ import {
   useQueryClient,
   QueryClient,
   QueryClientProvider,
-} from 'react-query'
+} from 'react-query';
 
 import App from './@salt/app';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement as HTMLElement);
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
 root.render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-    <App />
+      <App />
     </QueryClientProvider>
   </StrictMode>
 );
