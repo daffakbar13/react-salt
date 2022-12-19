@@ -8,7 +8,6 @@ import { ThemeProvider } from '@mui/material';
 import theme from '../styles/theme';
 import GlobalStyles from '@mui/material/GlobalStyles';
 
-
 export default function App() {
   return (
     <ThemeProvider theme={theme}>

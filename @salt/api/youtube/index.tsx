@@ -12,12 +12,11 @@ const options = (q: string) => ({
 
 export const getYoutubeApi = async (search: string): Promise<any> => {
   const payload = search.split(" ").join("+");
-  return axios
+  const result = await axios
     .request(options(payload))
-    .then((response) => {
-      return response.data;
-    })
+    .then((response) => response.data)
     .catch((error) => {
-      return error;
+      console.log(error);
     });
+    return result
 };
