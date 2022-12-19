@@ -1,3 +1,3 @@
-export interface StateType {
-  videosData: any;
-}
+// export interface StateType {
+//   videosData: any;
+// }

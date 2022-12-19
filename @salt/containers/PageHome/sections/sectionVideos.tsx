@@ -16,7 +16,7 @@ export default function SectionVideos() {
   // const videosData = useQuery(["videosData"], async() =>
   //   getYoutubeApi("tutorial react")
   // );
-  // console.log(videosData)
+  console.log(data)
 
   React.useEffect(()=>{
     getYoutubeApi().then(res=>setData(res))
