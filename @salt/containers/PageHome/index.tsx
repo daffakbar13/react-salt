@@ -7,11 +7,11 @@ import {
   SectionPeople,
   SectionVideos,
 } from "./sections";
-import HomeProvider from "./_provider";
+// import HomeProvider from "./_provider";
 
 export default function PageHome() {
   return (
-    <HomeProvider>
+    // <HomeProvider>
       <Grid container spacing={2}>
         <Grid item xs={12} md={8}>
           <Box display={"flex"} flexDirection="column" gap={5}>
@@ -27,6 +27,6 @@ export default function PageHome() {
           </Box>
         </Grid>
       </Grid>
-    </HomeProvider>
+    // </HomeProvider>
   );
 }

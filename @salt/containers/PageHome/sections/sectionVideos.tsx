@@ -3,12 +3,12 @@ import * as React from "react";
 import NorthIcon from "@mui/icons-material/North";
 import TitleMenu from "../../../components/TitleMenu";
 import MediaList1 from "../../../components/MediaList1";
-import { useHomeContext } from "../states";
+// import { useHomeContext } from "../states";
 
 export default function SectionVideos() {
-  const {
-    state: { videosData },
-  } = useHomeContext();
+  // const {
+  //   state: { videosData },
+  // } = useHomeContext();
   return (
     <Grid container spacing={1} columns={3}>
       <Grid item xs md={2}>
