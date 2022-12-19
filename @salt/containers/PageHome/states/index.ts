@@ -1,1 +1,1 @@
-export {useHomeContext,useHomeProvider} from './useContext'
+export { useHomeContext, useHomeProvider } from "./useContext";

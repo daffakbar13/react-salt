@@ -8,5 +8,9 @@ export default function HomeProvider(props: React.PropsWithChildren) {
   const videosData = useQuery(["videosData"], getYoutubeApi);
   const { Provider, handler, state } = useHomeProvider();
 
-  return <Provider value={{ handler, state: {...state, videosData} }}>{children}</Provider>;
+  return (
+    <Provider value={{ handler, state: { ...state, videosData } }}>
+      {children}
+    </Provider>
+  );
 }

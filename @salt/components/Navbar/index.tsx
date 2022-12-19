@@ -11,7 +11,7 @@ export default function Navbar() {
   const theme = useTheme();
   return (
     <Grid container spacing={{ xs: 2, md: 5 }} columns={2}>
-      <Grid item xs={2} md='auto' style={{ fontSize: 30 }}>
+      <Grid item xs={2} md="auto" style={{ fontSize: 30 }}>
         <span style={{ color: theme.palette.secondary.main }}>Social</span>
         <span style={{ color: theme.palette.grey[400] }}>Network</span>
       </Grid>
@@ -31,7 +31,7 @@ export default function Navbar() {
               }
             />
           </Grid>
-          <Grid item xs md='auto'>
+          <Grid item xs md="auto">
             <Grid container spacing={2} justifyContent="end">
               <Grid item xs="auto">
                 <Button

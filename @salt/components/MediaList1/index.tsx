@@ -33,8 +33,8 @@ export default function MediaList1(props: MediaList1Props) {
   const bottomSection = data.slice(3, 5);
   const theme = useTheme();
   const tablet = useMediaQuery(theme.breakpoints.down("md"));
-  const [firstLabel] = label.split(' ')
-  const secondLabel = label.split(' ').slice(1).join(' ')
+  const [firstLabel] = label.split(" ");
+  const secondLabel = label.split(" ").slice(1).join(" ");
 
   return (
     <Grid container spacing={1} columns={3}>

@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import * as React from "react";
 import TitleMenu from "../../../components/TitleMenu";
 import MediaList1 from "../../../components/MediaList1";
-import AddIcon from '@mui/icons-material/Add';
+import AddIcon from "@mui/icons-material/Add";
 
 export default function SectionDocuments() {
   return (

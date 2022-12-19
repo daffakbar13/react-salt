@@ -61,16 +61,16 @@ export default function HeaderContainer(props: React.PropsWithChildren) {
           ))}
         </Breadcrumbs>
         <Box>
-        <Typography variant="subtitle2" sx={{ color: "secondary.main" }}>
-          &#169; Copyright 2013 companyname inc.
-        </Typography>
-        <Breadcrumbs>
-          {["Privacy", "Terms"].map((text, index) => (
-            <Typography key={index} variant="subtitle2">
-              {text}
-            </Typography>
-          ))}
-        </Breadcrumbs>
+          <Typography variant="subtitle2" sx={{ color: "secondary.main" }}>
+            &#169; Copyright 2013 companyname inc.
+          </Typography>
+          <Breadcrumbs>
+            {["Privacy", "Terms"].map((text, index) => (
+              <Typography key={index} variant="subtitle2">
+                {text}
+              </Typography>
+            ))}
+          </Breadcrumbs>
         </Box>
       </Box>
     </Box>

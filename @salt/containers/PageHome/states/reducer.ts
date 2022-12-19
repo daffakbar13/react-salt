@@ -1,4 +1,3 @@
-/* eslint-disable no-shadow */
 import { StateType } from "./state";
 
 export interface DispatchType {

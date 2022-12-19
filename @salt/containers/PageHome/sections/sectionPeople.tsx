@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import * as React from "react";
 import TitleMenu from "../../../components/TitleMenu";
 import MediaList1 from "../../../components/MediaList1";
-import AlbumIcon from '@mui/icons-material/Album';
+import AlbumIcon from "@mui/icons-material/Album";
 
 export default function SectionPeople() {
   return (

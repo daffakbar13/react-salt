@@ -3,7 +3,6 @@ import * as React from "react";
 import Divider from "../../../components/Divider";
 import Media from "../../../components/Media";
 import TitleMenu from "../../../components/TitleMenu";
-import MapsUgcIcon from "@mui/icons-material/MapsUgc";
 
 export default function SectionChannels() {
   const [height, setHeight] = React.useState(0);
@@ -29,7 +28,6 @@ export default function SectionChannels() {
     return () => clearInterval(interval);
   }, []);
 
-  console.log(height);
   return (
     <Box
       display="flex"
@@ -92,7 +90,7 @@ export default function SectionChannels() {
                         top={1}
                         right={4}
                         color="secondary.main"
-                        fontWeight='bold'
+                        fontWeight="bold"
                         zIndex={1}
                         sx={{ fontSize: 12 }}
                       >

@@ -110,7 +110,7 @@ export default function SectionActivity() {
                   top={-1}
                   right={3}
                   color="primary.main"
-                  fontWeight='bold'
+                  fontWeight="bold"
                   zIndex={1}
                   sx={{ fontSize: 12 }}
                 >
