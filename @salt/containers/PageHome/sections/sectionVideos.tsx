@@ -3,12 +3,12 @@ import * as React from 'react';
 import NorthIcon from '@mui/icons-material/North';
 import TitleMenu from '../../../components/TitleMenu';
 import MediaList1 from '../../../components/MediaList1';
-import { useQueryClient, useQuery } from 'react-query';
+// import { useQueryClient, useQuery } from 'react-query';
 import { getYoutubeApi } from '../../../api/youtube';
 // import { useHomeContext } from "../states";
 
 export default function SectionVideos() {
-  const [data, setData] = React.useState([])
+  const [data, setData] = React.useState([]);
   // const {
   //   state: { videosData },
   // } = useHomeContext();
@@ -16,11 +16,11 @@ export default function SectionVideos() {
   // const videosData = useQuery(["videosData"], async() =>
   //   getYoutubeApi("tutorial react")
   // );
-  console.log(data)
+  console.log(data);
 
-  React.useEffect(()=>{
-    getYoutubeApi().then(res=>setData(res))
-  },[])
+  React.useEffect(() => {
+    getYoutubeApi().then((res) => setData(res));
+  }, []);
 
   return (
     <Grid container spacing={1} columns={3}>
